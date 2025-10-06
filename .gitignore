@@ -1,0 +1,29 @@
+# Build artifacts
+dist/
+dist-newstyle/
+.stack-work/
+cabal-dev/
+
+# Object files and interface files
+*.o
+*.hi
+*.chi
+*.chs.h
+*.dyn_o
+*.dyn_hi
+
+# HPC coverage files
+.hpc/
+
+# Generated documentation
+doc/html/
+
+# Editor/IDE specific files (examples)
+.vscode/
+.idea/
+*~
+.#*
+#*#
+
+# Executables (if not part of the intended distribution)
+*.exe

@@ -1,0 +1,100 @@
+{
+  "folders": [
+    {
+      "path": "."
+    }
+  ],
+  "settings": {
+    // Haskell Language Server (HLS) settings
+    "haskell.manageHLS": "GHCup",
+    "haskell.serverEnvironment": {
+      "PATH": "${HOME}/.ghcup/bin:${PATH}"
+    },
+    "haskell.formattingProvider": "ormolu",
+    "haskell.checkProject": true,
+    "haskell.maxCompletions": 40,
+
+    // HLS Plugin Configuratio n
+    "haskell.plugin.hlint.diagnosticsOnChange": true,
+    "haskell.plugin.eval.globalOn": true,
+    "haskell.plugin.importLens.codeActionsOn": true,
+    "haskell.plugin.retrie.globalOn": true,
+    "haskell.plugin.tactics.config.auto_gas_discharged": 4,
+    "haskell.plugin.rename.config.crossModule": true,
+
+    // Editor settings for Haskell files
+    "[haskell]": {
+      "editor.tabSize": 2,
+      "editor.insertSpaces": true,
+      "editor.formatOnSave": true,
+      "editor.formatOnPaste": false,
+      "editor.rulers": [80, 100],
+    },
+
+    // Cabal file settings
+    "[cabal]": {
+      "editor.tabSize": 2,
+      "editor.insertSpaces": true
+    },
+
+    // File associations
+    "files.associations": {
+      "*.hs": "haskell",
+      "*.lhs": "literate haskell",
+      "*.cabal": "cabal",
+      "*.hsig": "haskell"
+    },
+
+    // Exclude build artifacts from file watcher
+    "files.watcherExclude": {
+      "**/.stack-work/**": true,
+      "**/dist-newstyle/**": true,
+      "**/.cabal-sandbox/**": true,
+      "**/cabal.project.local": true
+    },
+
+    // Search exclusions
+    "search.exclude": {
+      "**/.stack-work": true,
+      "**/dist-newstyle": true,
+      "**/.cabal-sandbox": true
+    },
+
+    // File exclusions from explorer
+    "files.exclude": {
+      "**/.stack-work": true,
+      "**/dist-newstyle": true
+    },
+
+    // Terminal environment
+    "terminal.integrated.env.linux": {
+      "PATH": "${env:HOME}/.ghcup/bin:${env:PATH}"
+    },
+    "terminal.integrated.env.osx": {
+      "PATH": "${env:HOME}/.ghcup/bin:${env:PATH}"
+    },
+
+    // Auto-save
+    "files.autoSave": "onFocusChange",
+
+    // Breadcrumbs
+    "breadcrumbs.enabled": true,
+
+    // Minimap
+    "editor.minimap.enabled": true,
+
+    // Trailing whitespace (Haskell community preference)
+    "files.trimTrailingWhitespace": true,
+    "files.insertFinalNewline": true,
+
+    // Git integration
+    "git.ignoreLimitWarning": true
+  },
+  "extensions": {
+    "recommendations": [
+      "haskell.haskell",
+      "justusadam.language-haskell",
+      "visortelle.haskell-spotlight"
+    ]
+  }
+}
